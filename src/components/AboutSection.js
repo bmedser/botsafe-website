@@ -3,10 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faRobot,
     faBrain,
     faUserGroup,
-    faMicrochip
+    faShieldAlt,
+    faDollarSign
 } from '@fortawesome/free-solid-svg-icons';
 
 const AboutContainer = styled.section`
@@ -69,19 +69,19 @@ const FeatureDescription = styled.p`
 
 const features = [
     {
-        icon: faRobot,
-        title: 'Advanced Automation',
-        description: 'Our cutting-edge AI technology provides seamless automation for OSRS tasks, ensuring efficiency and reliability.',
-    },
-    {
         icon: faBrain,
-        title: 'An Intelligent Alternative to Botting on OSRS',
-        description: 'Experience the future of botting with our AI-driven solution that mimics human behavior, providing a safe and undetectable alternative to traditional botting.',
+        title: 'The Safest OSRS Bot',
+        description: 'Our AI-driven solution for OSRS is designed to mimic human behavior, offering a safer and less detectable option for botting.'
     },
     {
-        icon: faMicrochip,
-        title: 'Intelligent Chat Responses',
-        description: 'Our BotSafe bot responds back to players within the game using a customizable Large Language Model (LLM) tailored to your preferences and taste.',
+        icon: faShieldAlt,
+        title: 'Unmatched Anti-Ban Technology',
+        description: 'Our anti-ban technology for OSRS is built to keep your account secure. With smart AI designed to minimize detection risks, you can use our tool with confidence knowing your account is well-guarded.'
+    },
+    {
+        icon: faDollarSign,
+        title: 'Earn Money Safely',
+        description: 'Maximize your in-game profits with confidence. Our AI-powered bot allows you to farm gold and valuable items securely, giving you peace of mind and financial benefits.',
     },
     {
         icon: faUserGroup,

@@ -13,6 +13,7 @@ const FooterContainer = styled.footer`
 const FooterContent = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
 `;
@@ -20,6 +21,10 @@ const FooterContent = styled.div`
 const FooterSection = styled.div`
     flex: 1;
     min-width: 200px;
+`;
+
+const ContactSection = styled(FooterSection)`
+    text-align: right;
 `;
 
 const FooterTitle = styled.h3`
@@ -49,6 +54,7 @@ const SocialIcons = styled.div`
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    justify-content: flex-end;
 `;
 
 const SocialIcon = styled.a`
@@ -62,10 +68,10 @@ const SocialIcon = styled.a`
 `;
 
 const Copyright = styled.div`
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #999;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
 `;
 
 const Footer = () => {
@@ -74,27 +80,25 @@ const Footer = () => {
             <FooterContent>
                 <FooterSection>
                     <FooterTitle>BotSafe</FooterTitle>
-                    <p>Advanced automation solutions for your business needs.</p>
-                    <SocialIcons>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faTwitter} /></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faFacebook} /></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faLinkedin} /></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faGithub} /></SocialIcon>
-                    </SocialIcons>
+                    <p>The Safe OSRS Bot</p>
                 </FooterSection>
-                <FooterSection>
+                <ContactSection>
                     <FooterTitle>Contact Us</FooterTitle>
                     <FooterList>
                         <FooterListItem>Email: info@botsafe.com</FooterListItem>
-                        <FooterListItem>Phone: +1 (123) 456-7890</FooterListItem>
-                        <FooterListItem>Address: 123 Tech Street, San Francisco, CA 94105</FooterListItem>
                         <FooterListItem>
                             <FooterLink href="https://discord.gg/XmhAZgmhJb" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faDiscord} /> Join our Discord for support
                             </FooterLink>
                         </FooterListItem>
                     </FooterList>
-                </FooterSection>
+                    <SocialIcons>
+                        <SocialIcon href="#"><FontAwesomeIcon icon={faTwitter} /></SocialIcon>
+                        <SocialIcon href="#"><FontAwesomeIcon icon={faFacebook} /></SocialIcon>
+                        <SocialIcon href="#"><FontAwesomeIcon icon={faLinkedin} /></SocialIcon>
+                        <SocialIcon href="#"><FontAwesomeIcon icon={faGithub} /></SocialIcon>
+                    </SocialIcons>
+                </ContactSection>
             </FooterContent>
             <Copyright>
                 © {new Date().getFullYear()} BotSafe. All rights reserved.

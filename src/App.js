@@ -3,13 +3,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
-import Header from './components/Header';
+// import Header from './components/Header';
 import SplashScreen from './components/SplashScreen';
 import AboutSection from './components/AboutSection';
 import FeaturesSection from './components/FeaturesSection';
-import PricingSection from './components/PricingSection';
+// import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
 import GetStartedPage from "./components/GetStartedPage";
+import CallToAction from './components/CallToAction';
+
+import './globalStyles.css';  // Import the global stylesheet
+
+
 // Font
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -21,7 +26,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 `;
+/*
 
+
+
+
+
+ */
 function App() {
     return (
         <Router>
@@ -29,11 +40,12 @@ function App() {
             <Routes>
                 <Route path="/" element={
                     <>
-                        <Header />
+                        {/*<Header />*/}
                         <SplashScreen />
                         <AboutSection />
                         <FeaturesSection />
-                        <PricingSection />
+                        {/*<PricingSection />*/}
+                        <CallToAction />
                         <Footer />
                     </>
                 } />

@@ -2,12 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+// botsafe icon
+import botSafeIcon from '../assets/botsafe_icon.svg';
+
 const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(18, 18, 18, 0.8);
+  //background-color: rgba(18, 18, 18, 0.8);
+  background-color: rgba(244, 244, 244, 0.8);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -20,6 +24,16 @@ const Logo = styled.h1`
   color: #ffffff;
   margin: 0;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+`;
+
+const LogoIcon = styled.img`
+  width: 32px; /* Adjust size as needed - was 24px*/
+  height: 32px; /* Adjust size as needed */
+  margin-right: 0.5rem; /* Space between icon and text */
+filter: drop-shadow(0 0 10px rgba(200, 200, 200, 0.3)); /* Glow effect */
+filter: brightness(200%);
 `;
 
 const Nav = styled.nav`
@@ -62,11 +76,14 @@ const Header = () => {
 
     return (
         <HeaderContainer style={{ transform: isVisible ? 'translateY(0)' : 'translateY(-100%)' }}>
-            <Logo>BotSafe</Logo>
+            <Logo>
+                <LogoIcon src={botSafeIcon} alt="BotSafe Icon" />
+                {/*BotSafe*/}
+            </Logo>
             <Nav>
                 <NavLink href="#about">About</NavLink>
                 <NavLink href="#features">Features</NavLink>
-                <NavLink href="#pricing">Pricing</NavLink>
+                {/*<NavLink href="#pricing">Pricing</NavLink>*/}
                 <NavLink href="#contact">Contact</NavLink>
             </Nav>
         </HeaderContainer>
