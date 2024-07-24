@@ -1,7 +1,7 @@
 // src/components/AboutSection.js
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faBrain,
     faUserGroup,
@@ -12,6 +12,8 @@ import {
 const AboutContainer = styled.section`
     padding: 4rem 2rem;
     background-color: #f5f5f5;
+
+    font-family: 'Poppins', sans-serif; /* Apply font */
 `;
 
 const Title = styled.h2`
@@ -97,7 +99,7 @@ const AboutSection = () => {
             <FeaturesGrid>
                 {features.map((feature, index) => (
                     <FeatureCard key={index}>
-                        <FeatureIcon icon={feature.icon} />
+                        <FeatureIcon icon={feature.icon}/>
                         <FeatureTitle>{feature.title}</FeatureTitle>
                         <FeatureDescription>{feature.description}</FeatureDescription>
                     </FeatureCard>

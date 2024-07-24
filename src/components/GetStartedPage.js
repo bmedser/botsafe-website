@@ -41,52 +41,52 @@ const PlanPrice = styled.div`
 `;
 
 const PlanDescription = styled.p`
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 `;
 
 const FeatureList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
 `;
 
 const FeatureItem = styled.li`
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
 
-  &:before {
-    content: '✓';
-    color: #4CAF50;
-    margin-right: 0.5rem;
-  }
+    &:before {
+        content: '✓';
+        color: #4CAF50;
+        margin-right: 0.5rem;
+    }
 `;
 
 const ActionButton = styled.button`
-  background-color: ${props => props.color || '#4CAF50'};
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: ${props => props.color || '#4CAF50'};
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: ${props => props.hoverColor || '#45a049'};
-  }
+    &:hover {
+        background-color: ${props => props.hoverColor || '#45a049'};
+    }
 `;
 
 const SpecialDeal = styled.div`
-  background-color: ${props => props.color || '#4CAF50'};
-  color: white;
-  padding: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin: -2rem -2rem 2rem -2rem;
+    background-color: ${props => props.color || '#4CAF50'};
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: -2rem -2rem 2rem -2rem;
 `;
 
 const plans = [
@@ -163,7 +163,7 @@ const GetStartedPage = () => {
                         <PlanName>{plan.name}</PlanName>
                         <PlanPrice>{plan.price}</PlanPrice>
                         {plan.regularPrice && (
-                            <div style={{ textDecoration: 'line-through', marginBottom: '1rem' }}>
+                            <div style={{textDecoration: 'line-through', marginBottom: '1rem'}}>
                                 {plan.regularPrice}
                             </div>
                         )}

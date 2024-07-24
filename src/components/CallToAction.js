@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import '../globalStyles.css';
 
@@ -14,6 +14,8 @@ const CTATitle = styled.h2`
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #333;
+    font-family: 'Poppins', sans-serif; /* Apply font */
+
 `;
 
 const CTADescription = styled.p`
@@ -23,11 +25,12 @@ const CTADescription = styled.p`
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Montserrat', sans-serif; /* Default font */
+    font-family: 'Poppins', sans-serif; /* Apply font */
+
 `;
 
 const CTADescriptionItalic = styled(CTADescription)`
-    font-family: 'MontserratThinItalic', sans-serif; /* Italic font */
+    font-family: 'PoppinsItalic', sans-serif; /* Apply font */
 `;
 
 const GetStartedButton = styled(Link)`
@@ -62,7 +65,9 @@ const CallToAction = () => {
             </CTADescriptionItalic>
 
             <CTADescription>
-                Our mission is to deliver a superior solution that seamlessly integrates advanced AI models, user-friendly features, and robust anti-ban measures. With BotSafe, experience precise human-like behavior and a secure botting environment.
+                Our mission is to deliver a superior solution that seamlessly integrates advanced AI models,
+                user-friendly features, and robust anti-ban measures. With BotSafe, experience precise human-like
+                behavior and a secure botting environment.
             </CTADescription>
 
             <CTADescriptionItalic>

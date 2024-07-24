@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import backgroundVideo from '../assets/automation-video.mp4';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShield, faRobot, faClock } from '@fortawesome/free-solid-svg-icons';
-import botSafeSVG from '../assets/Asset 2.svg';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faShield, faRobot, faClock} from '@fortawesome/free-solid-svg-icons';
+import botSafeSVG from '../assets/fresh_botsafe.svg';
 
 const SplashContainer = styled.div`
     position: relative;
@@ -13,7 +13,7 @@ const SplashContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    font-family: 'Montserrat', sans-serif; /* Apply the font here */
+    font-family: 'Poppins', sans-serif; /* Apply the font here */
 
 `;
 
@@ -57,17 +57,17 @@ const LogoImage = styled.img`
     height: auto;
     display: block;
     filter: drop-shadow(0 0 10px white);
-    animation: glow 5s infinite alternate;
+    animation: glow 3s infinite alternate;
 
     @keyframes glow {
         0% {
-            filter: drop-shadow(0 0 3px white);
+            filter: drop-shadow(0 0 2px white);
         }
         50% {
-            filter: drop-shadow(0 0 5px white);
+            filter: drop-shadow(0 0 6px white);
         }
         100% {
-            filter: drop-shadow(0 0 3px white);
+            filter: drop-shadow(0 0 2px white);
         }
     }
 `;
@@ -123,29 +123,32 @@ const SplashScreen = () => {
     return (
         <SplashContainer>
             <VideoBackground autoPlay loop muted>
-                <source src={backgroundVideo} type="video/mp4" />
+                <source src={backgroundVideo} type="video/mp4"/>
             </VideoBackground>
             <Content>
                 <LogoContainer>
-                    <LogoImage src={botSafeSVG} alt="BotSafe" />
+                    <LogoImage src={botSafeSVG} alt="BotSafe"/>
                 </LogoContainer>
                 <TextContent>
                     <Tagline>The Safe OSRS Bot</Tagline>
-                    <Subtitle>Forget the Worry of Being Banned: Experience Safe and Intelligent OSRS Botting with Advanced AI</Subtitle>
+                    <Subtitle>Forget the Worry of Being Banned: Experience Safe and Intelligent OSRS Botting with
+                        Advanced AI</Subtitle>
                 </TextContent>
                 <FeaturesContainer>
                     <Feature>
-                        <FeatureIcon icon={faShield} />
+                        <FeatureIcon icon={faShield}/>
                         <FeatureTitle>Secure</FeatureTitle>
-                        <FeatureDescription>Unrivaled anti-ban technology ensures complete safety for your account.</FeatureDescription>
+                        <FeatureDescription>Unrivaled anti-ban technology ensures complete safety for your
+                            account.</FeatureDescription>
                     </Feature>
                     <Feature>
-                        <FeatureIcon icon={faRobot} />
+                        <FeatureIcon icon={faRobot}/>
                         <FeatureTitle>Intelligent</FeatureTitle>
-                        <FeatureDescription>Advanced AI integration provides a seamless and human-like gameplay experience.</FeatureDescription>
+                        <FeatureDescription>Advanced AI integration provides a seamless and human-like gameplay
+                            experience.</FeatureDescription>
                     </Feature>
                     <Feature>
-                        <FeatureIcon icon={faClock} />
+                        <FeatureIcon icon={faClock}/>
                         <FeatureTitle>Friendly Support</FeatureTitle>
                         <FeatureDescription>Don't worry about being stuck, help is here!</FeatureDescription>
                     </Feature>

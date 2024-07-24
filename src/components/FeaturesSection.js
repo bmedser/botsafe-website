@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRobot, faEye, faFingerprint, faBrain, faPersonRunning} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+import {faRobot, faEye, faFingerprint, faBrain, faPersonRunning, faMicrochip} from '@fortawesome/free-solid-svg-icons';
 
 const Section = styled.section`
     padding: 4rem 2rem;
@@ -9,6 +10,9 @@ const Section = styled.section`
     transition: padding-bottom 0.3s ease;
     padding-bottom: ${props => props.extraPadding}px;
     overflow: hidden; /* Hide horizontal overflow to keep section tidy */
+
+    font-family: 'Poppins', sans-serif; /* Apply font */
+
 `;
 
 const SectionTitle = styled.h2`
@@ -92,7 +96,7 @@ const FeatureDescription = styled.p`
     overflow: hidden;
 `;
 
-const FeatureCardContent = ({ icon, title, description, collapsedHeight, expandedHeight, onExpand }) => {
+const FeatureCardContent = ({icon, title, description, collapsedHeight, expandedHeight, onExpand}) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpansion = () => {
@@ -116,7 +120,7 @@ const FeatureCardContent = ({ icon, title, description, collapsedHeight, expande
             expandedHeight={expandedHeight}
         >
             <FeatureIcon>
-                <FontAwesomeIcon icon={icon} />
+                <FontAwesomeIcon icon={icon}/>
             </FeatureIcon>
             <FeatureTitle>{title}</FeatureTitle>
             <FeatureDescription isVisible={isExpanded}>
@@ -162,11 +166,11 @@ const FeaturesSection = () => {
             title: "Unmatched Efficiency",
             description: "Designed with efficiency and reliability at its core, BotSafe stands out from the competition. Developed in C++ and leveraging advanced CV techniques, our bot delivers superior performance you can trust."
         },
-        // {
-        //     icon: faMicrochip,
-        //     title: 'Intelligent Chat Responses',
-        //     description: 'Optionally, BotSafe responds back to players within the game using a customizable Large Language Model (LLM) tailored to your preferences and taste.',
-        // },
+        {
+            icon: faMicrochip,
+            title: 'AI Chat Responses',
+            description: 'With the intelliChat Package, BotSafe responds back to players within the game using a customizable Large Language Model (LLM) tailored to your preferences. Customise your own personality traits, so no one suspects you are a bot.',
+        },
     ];
 
     return (
