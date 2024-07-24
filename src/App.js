@@ -45,7 +45,7 @@ function App() {
                         <SplashScreen/>
                         <AboutSection/>
                         <FeaturesSection/>
-                        <PricingSection/>
+                        {/*<PricingSection/>*/}
                         <CallToAction/>
                         <Footer/>
                     </>

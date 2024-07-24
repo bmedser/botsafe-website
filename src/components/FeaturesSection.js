@@ -5,12 +5,13 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faRobot, faEye, faFingerprint, faBrain, faPersonRunning, faMicrochip} from '@fortawesome/free-solid-svg-icons';
 
 const Section = styled.section`
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     background-color: rgba(243, 243, 243, 0.95);
     transition: padding-bottom 0.3s ease;
-    padding-bottom: ${props => props.extraPadding}px;
-    overflow: hidden; /* Hide horizontal overflow to keep section tidy */
-
+     padding-bottom: ${props => props.extraPadding}px;
+    //overflow: hidden; /* Hide horizontal overflow to keep section tidy */
+    
+    //padding-bottom: 4px;
     font-family: 'Poppins', sans-serif; /* Apply font */
 
 `;
@@ -25,8 +26,9 @@ const FeatureContainer = styled.div`
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
-    padding: 0 1rem; /* Add some padding on the sides for better scroll appearance */
+    padding: 0 8rem; /* Add some padding on the sides for better scroll appearance */
 
+    
     /* WebKit-based browsers */
     ::-webkit-scrollbar {
         height: 12px; /* Scrollbar height */
@@ -61,7 +63,7 @@ const FeatureCard = styled.div`
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 255, 0.1);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -69,8 +71,10 @@ const FeatureCard = styled.div`
     text-align: center;
     cursor: pointer;
     min-width: 80px; /* Set min-width to be 3 times smaller than previous width */
-    height: ${props => props.isExpanded ? `${props.expandedHeight}px` : `${props.collapsedHeight}px`};
+    height: ${props => props.isExpanded ? `${props.expandedHeight}*4px` : `${props.collapsedHeight}px`};
     overflow: hidden;
+
+    margin-bottom: 12px;
 
     &:hover {
         transform: translateY(-10px);
