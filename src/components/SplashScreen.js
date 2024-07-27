@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import backgroundVideo from '../assets/automation-video.mp4';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faShield, faRobot, faClock} from '@fortawesome/free-solid-svg-icons';
 import botSafeSVG from '../assets/fresh_botsafe.svg';
 
 const SplashContainer = styled.div`
@@ -47,9 +45,10 @@ const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
-    width: 25%;
-    max-width: 200px;
+    margin-top:     4rem;
+    //margin-bottom: 2rem;
+    width: 45%;
+    max-width: 300px;
     min-width: 100px; // Ensure logo doesn't become too small on mobile
 `;
 const LogoImage = styled.img`
@@ -76,48 +75,50 @@ const TextContent = styled.div`
     margin-top: 1rem;
 `;
 
-const Tagline = styled.p`
-    font-size: 1.5rem;
+const Title = styled.p`
+    font-size: 1.25rem;
+    margin-top: 4rem;
     font-weight: 400;
-    color: #999;
+    color: rgba(153, 153, 153, 0.68);
     margin-bottom: 3rem;
 `;
 
 const Subtitle = styled.h3`
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;    
+    
+    margin-top: 6rem;
     color: #eee;
-    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 `;
 
-const FeaturesContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-`;
-
-const Feature = styled.div`
-    text-align: center;
-    flex: 1 1 250px;
-    min-width: 250px;
-    max-width: 300px;
-`;
-
-const FeatureIcon = styled(FontAwesomeIcon)`
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-`;
-
-const FeatureTitle = styled.h3`
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-`;
-
-const FeatureDescription = styled.p`
-    font-size: 1rem;
-`;
+// const FeaturesContainer = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     gap: 2rem;
+//     margin-top: 2rem;
+// `;
+//
+// const Feature = styled.div`
+//     text-align: center;
+//     flex: 1 1 250px;
+//     min-width: 250px;
+//     max-width: 300px;
+// `;
+//
+// const FeatureIcon = styled(FontAwesomeIcon)`
+//     font-size: 2.5rem;
+//     margin-bottom: 1rem;
+// `;
+//
+// const FeatureTitle = styled.h3`
+//     font-size: 1.5rem;
+//     margin-bottom: 0.5rem;
+// `;
+//
+// const FeatureDescription = styled.p`
+//     font-size: 1rem;
+// `;
 
 const SplashScreen = () => {
     return (
@@ -130,29 +131,29 @@ const SplashScreen = () => {
                     <LogoImage src={botSafeSVG} alt="BotSafe"/>
                 </LogoContainer>
                 <TextContent>
-                    <Tagline>The Safe OSRS Bot</Tagline>
+                    <Title>The Safe OSRS Bot</Title>
                     <Subtitle>Forget the Worry of Being Banned: Experience Safe and Intelligent OSRS Botting with
                         Advanced AI</Subtitle>
                 </TextContent>
-                <FeaturesContainer>
-                    <Feature>
-                        <FeatureIcon icon={faShield}/>
-                        <FeatureTitle>Secure</FeatureTitle>
-                        <FeatureDescription>Unrivaled anti-ban technology ensures complete safety for your
-                            account.</FeatureDescription>
-                    </Feature>
-                    <Feature>
-                        <FeatureIcon icon={faRobot}/>
-                        <FeatureTitle>Intelligent</FeatureTitle>
-                        <FeatureDescription>Advanced AI integration provides a seamless and human-like gameplay
-                            experience.</FeatureDescription>
-                    </Feature>
-                    <Feature>
-                        <FeatureIcon icon={faClock}/>
-                        <FeatureTitle>Friendly Support</FeatureTitle>
-                        <FeatureDescription>Don't worry about being stuck, help is here!</FeatureDescription>
-                    </Feature>
-                </FeaturesContainer>
+                {/*<FeaturesContainer>*/}
+                {/*    <Feature>*/}
+                {/*        <FeatureIcon icon={faShield}/>*/}
+                {/*        <FeatureTitle>Secure</FeatureTitle>*/}
+                {/*        <FeatureDescription>Unrivaled anti-ban technology ensures complete safety for your*/}
+                {/*            account.</FeatureDescription>*/}
+                {/*    </Feature>*/}
+                {/*    <Feature>*/}
+                {/*        <FeatureIcon icon={faRobot}/>*/}
+                {/*        <FeatureTitle>Intelligent</FeatureTitle>*/}
+                {/*        <FeatureDescription>Advanced AI integration provides a seamless and human-like gameplay*/}
+                {/*            experience.</FeatureDescription>*/}
+                {/*    </Feature>*/}
+                {/*    <Feature>*/}
+                {/*        <FeatureIcon icon={faClock}/>*/}
+                {/*        <FeatureTitle>Friendly Support</FeatureTitle>*/}
+                {/*        <FeatureDescription>Don't worry about being stuck, help is here!</FeatureDescription>*/}
+                {/*    </Feature>*/}
+                {/*</FeaturesContainer>*/}
             </Content>
         </SplashContainer>
     );

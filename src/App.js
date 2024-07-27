@@ -7,10 +7,11 @@ import {createGlobalStyle} from 'styled-components';
 import SplashScreen from './components/SplashScreen';
 import AboutSection from './components/AboutSection';
 import FeaturesSection from './components/FeaturesSection';
-import PricingSection from './components/PricingSection';
+// import PricingSection from './components/PricingSection';
 import Footer from './components/Footer';
 import GetStartedPage from "./components/GetStartedPage";
 import CallToAction from './components/CallToAction';
+import QASection from './components/QASection'
 import LegalPage from './components/LegalPage';
 
 import './globalStyles.css';  // Import the global stylesheet
@@ -46,6 +47,7 @@ function App() {
                         <AboutSection/>
                         <FeaturesSection/>
                         {/*<PricingSection/>*/}
+                        <QASection/>
                         <CallToAction/>
                         <Footer/>
                     </>

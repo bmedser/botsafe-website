@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
-import {faRobot, faEye, faFingerprint, faBrain, faPersonRunning, faMicrochip} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faRobot,
+    faEye,
+    faFingerprint,
+    faBrain,
+    faPersonRunning,
+    faMicrochip
+} from '@fortawesome/free-solid-svg-icons';
 
 const Section = styled.section`
-    padding: 4rem 0rem;
-    background-color: rgba(243, 243, 243, 0.95);
-    transition: padding-bottom 0.3s ease;
-     padding-bottom: ${props => props.extraPadding}px;
-    //overflow: hidden; /* Hide horizontal overflow to keep section tidy */
-    
-    //padding-bottom: 4px;
-    font-family: 'Poppins', sans-serif; /* Apply font */
-
+    padding: 4rem 0;
+    background-color: rgba(248, 248, 248, 0.95);
+    font-family: 'Poppins', sans-serif;
 `;
 
 const SectionTitle = styled.h2`
@@ -24,44 +24,21 @@ const SectionTitle = styled.h2`
 
 const FeatureContainer = styled.div`
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-behavior: smooth;
-    padding: 0 8rem; /* Add some padding on the sides for better scroll appearance */
-
-    
-    /* WebKit-based browsers */
-    ::-webkit-scrollbar {
-        height: 12px; /* Scrollbar height */
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1; /* Scrollbar track color */
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #888; /* Scrollbar thumb color */
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555; /* Scrollbar thumb color on hover */
-    }
-
-    /* Firefox */
-    scrollbar-width: thin; /* Scrollbar width */
-    scrollbar-color: #888 #f1f1f1; /* Scrollbar thumb and track color */
+    justify-content: center;
+    padding: 0 2rem;
 `;
 
 const FeatureGrid = styled.div`
     display: flex;
-    flex-wrap: nowrap;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1200px;
 `;
 
 const FeatureCard = styled.div`
     background-color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 255, 0.1);
     transition: all 0.3s ease;
@@ -70,19 +47,17 @@ const FeatureCard = styled.div`
     align-items: center;
     text-align: center;
     cursor: pointer;
-    min-width: 80px; /* Set min-width to be 3 times smaller than previous width */
-    height: ${props => props.isExpanded ? `${props.expandedHeight}*4px` : `${props.collapsedHeight}px`};
+    width: ${props => props.isExpanded ? '400px' : '150px'};
+    height: ${props => props.isExpanded ? 'auto' : '200px'};
     overflow: hidden;
 
-    margin-bottom: 12px;
-
     &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
 `;
 
 const FeatureIcon = styled.div`
-    font-size: 3rem;
+    font-size: 2rem;
     color: #553fb5;
     margin-bottom: 1rem;
 `;
@@ -90,6 +65,7 @@ const FeatureIcon = styled.div`
 const FeatureTitle = styled.h3`
     margin-bottom: 1rem;
     color: #333;
+    font-size: ${props => props.isExpanded ? '1.2rem' : '1rem'};
 `;
 
 const FeatureDescription = styled.p`
@@ -100,33 +76,13 @@ const FeatureDescription = styled.p`
     overflow: hidden;
 `;
 
-const FeatureCardContent = ({icon, title, description, collapsedHeight, expandedHeight, onExpand}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const toggleExpansion = () => {
-        setIsExpanded(!isExpanded);
-        onExpand(!isExpanded);
-    };
-
+const FeatureCardContent = ({ icon, title, description, isExpanded, onClick }) => {
     return (
-        <FeatureCard
-            isExpanded={isExpanded}
-            onClick={toggleExpansion}
-            onMouseEnter={() => {
-                setIsExpanded(true);
-                onExpand(true);
-            }}
-            onMouseLeave={() => {
-                setIsExpanded(false);
-                onExpand(false);
-            }}
-            collapsedHeight={collapsedHeight}
-            expandedHeight={expandedHeight}
-        >
+        <FeatureCard isExpanded={isExpanded} onClick={onClick}>
             <FeatureIcon>
-                <FontAwesomeIcon icon={icon}/>
+                <FontAwesomeIcon icon={icon} />
             </FeatureIcon>
-            <FeatureTitle>{title}</FeatureTitle>
+            <FeatureTitle isExpanded={isExpanded}>{title}</FeatureTitle>
             <FeatureDescription isVisible={isExpanded}>
                 {description}
             </FeatureDescription>
@@ -135,13 +91,7 @@ const FeatureCardContent = ({icon, title, description, collapsedHeight, expanded
 };
 
 const FeaturesSection = () => {
-    const [collapsedHeight] = useState(200);
-    const [expandedHeight] = useState(300);
-    const [extraPadding, setExtraPadding] = useState(0);
-
-    const handleExpand = (isExpanded) => {
-        setExtraPadding(isExpanded ? expandedHeight - collapsedHeight : 0);
-    };
+    const [expandedIndex, setExpandedIndex] = useState(null);
 
     const features = [
         {
@@ -157,14 +107,13 @@ const FeaturesSection = () => {
         {
             icon: faBrain,
             title: "Machine Learning",
-            description: "Stay ahead of the everyone else, with our adaptive machine learning technology. Our bot continuously evolves, guaranteeing top-notch automation and reliability."
+            description: "Stay ahead of everyone else, with our adaptive machine learning technology. Our bot continuously evolves, guaranteeing top-notch automation and reliability."
         },
         {
             icon: faFingerprint,
             title: "Biometric Integration",
             description: "Achieve the ultimate in bot security with our biometric integration. Each user's bot is uniquely tailored to their own human-to-machine inputs. Unlike competitors who deploy identical techniques across thousands of bots, BotSafe ensures you are literally replicating yourself, providing unmatched safety and undetectability."
         },
-
         {
             icon: faPersonRunning,
             title: "Unmatched Efficiency",
@@ -177,8 +126,12 @@ const FeaturesSection = () => {
         },
     ];
 
+    const handleCardClick = (index) => {
+        setExpandedIndex(index === expandedIndex ? null : index);
+    };
+
     return (
-        <Section id="features" extraPadding={extraPadding}>
+        <Section id="features">
             <SectionTitle>Our Technology</SectionTitle>
             <FeatureContainer>
                 <FeatureGrid>
@@ -186,9 +139,8 @@ const FeaturesSection = () => {
                         <FeatureCardContent
                             key={index}
                             {...feature}
-                            collapsedHeight={collapsedHeight}
-                            expandedHeight={expandedHeight}
-                            onExpand={handleExpand}
+                            isExpanded={index === expandedIndex}
+                            onClick={() => handleCardClick(index)}
                         />
                     ))}
                 </FeatureGrid>
