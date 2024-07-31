@@ -1,4 +1,4 @@
-import React,  { useState, useEffect }  from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import styled , {keyframes} from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -86,7 +86,7 @@ const GetStartedButton = styled(Link)`
 `;
 
 const CallToAction = () => {
-    const words = ['earn money', 'level up', 'max your main', 'skip the boring stuff', 'get all 99s'];
+    const words = useMemo(() => ['earn money', 'level up', 'max your main', 'skip the boring stuff', 'get all 99s'], []);
     const [currentWord, setCurrentWord] = useState(words[0]);
     const [index, setIndex] = useState(0);
 
@@ -123,13 +123,8 @@ const CallToAction = () => {
 
 
             <CTADescription>
-                BotSafe is in the final process of being released officially. It will be released publically before 2025. Join our Discord before the official release to get the early bird special!
+                BotSafe is in the final process of being released officially.  Join our Discord for news, and join a passionate like-minded community!
             </CTADescription>
-
-            <CTADescription>
-                Join a new passionate community!
-            </CTADescription>
-
 
 
             <GetStartedButton to="https://discord.gg/XmhAZgmhJb">Join Discord</GetStartedButton>

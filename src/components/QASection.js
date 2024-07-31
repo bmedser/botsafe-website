@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowUpCircle } from 'lucide-react';
 import './QASection.css';
 
 const qaData = [
@@ -9,21 +7,21 @@ const qaData = [
     },
     {
         question: "Will it work on my computer?",
-        answer: "BotSafe integrates seamlessly with an Android emulator to run OSRS. The software is designed to be lightweight and efficient, ensuring smooth performance on most modern computers. However, it may encounter issues on significantly older hardware."
+        answer: "BotSafe integrates seamlessly with an Android emulator. The software is designed to be lightweight and efficient, ensuring smooth performance on the lowest-end computers."
     },
     {
         question: "Why is it safe?",
         answer: "BotSafe is safe because it doesn't touch the game's inner workings. Instead, we create a special bot that copies your moves to interact with the game, just like you would. This way, your character can level up whilst you sleep, safely."
+    },
+    {
+        question: "When can I use it?",
+        answer: "BotSafe is in a closed-beta currently. It is planned to be publicly released to before 2025."
     }
 ];
 
 const QASection = () => {
-    const [showScrollTop, setShowScrollTop] = useState(false);
 
-    // Function to scroll to the top of the page
-    const scrollTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+
 
     // Style definitions
     const styles = {
@@ -125,26 +123,16 @@ const QASection = () => {
                     ))}
                 </div>
 
-                <button
-                    style={styles.qaButton}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.qaButtonHover.backgroundColor}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.qaButton.backgroundColor}
-                >
-                    Read more FAQs
-                </button>
+                {/*<button*/}
+                {/*    style={styles.qaButton}*/}
+                {/*    onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.qaButtonHover.backgroundColor}*/}
+                {/*    onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.qaButton.backgroundColor}*/}
+                {/*>*/}
+                {/*    Read more FAQs*/}
+                {/*</button>*/}
             </div>
 
-            {showScrollTop && (
-                <button
-                    onClick={scrollTop}
-                    style={styles.scrollTopButton}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = styles.scrollTopButtonHover.backgroundColor}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = styles.scrollTopButton.backgroundColor}
-                    aria-label="Scroll to top"
-                >
-                    <ArrowUpCircle size={24} />
-                </button>
-            )}
+
         </div>
     );
 };

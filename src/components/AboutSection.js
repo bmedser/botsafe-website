@@ -88,7 +88,7 @@ const features = [
     {
         icon: faUserGroup,
         title: 'Helpful Support',
-        description: 'Our dedicated support team is here to assist you with any questions or issues, ensuring a smooth and enjoyable experience.',
+        description: 'Our support is here to assist you with any questions or issues, ensuring a smooth, enjoyable and most importantly a safe experience.',
     },
 ];
 

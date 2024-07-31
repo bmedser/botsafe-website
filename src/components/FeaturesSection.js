@@ -7,7 +7,7 @@ import {
     faFingerprint,
     faBrain,
     faPersonRunning,
-    faMicrochip
+    faMicrochip, faMobileAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 const Section = styled.section`
@@ -97,32 +97,37 @@ const FeaturesSection = () => {
         {
             icon: faRobot,
             title: "Advanced Automation",
-            description: "Forget the disappointment that comes from traditional botting softwares. Experience the pinnacle of automation with our AI OSRS bot. Designed to replicate human-like behavior with unmatched precision, our bots execute your tasks with unparalleled safety and reliability."
+            description: "Forget the disappointment that comes from traditional botting softwares. Experience the pinnacle of safe automation with our AI OSRS bot. Designed to replicate human-like behavior with unmatched precision, our bots execute your tasks with unparalleled safety and reliability."
         },
         {
             icon: faEye,
             title: "Computer Vision",
-            description: "Harness the power of cutting-edge computer vision technology. Our bots analyze and interact with the game environment with remarkable accuracy, making intelligent decisions for more effective and smarter automation."
+            description: "Leverage the state-of-the-art computer vision technology. Our bots analyze and interact with the game environment with accuracy, making intelligent decisions for more effective and smarter automation."
         },
         {
             icon: faBrain,
             title: "Machine Learning",
-            description: "Stay ahead of everyone else, with our adaptive machine learning technology. Our bot continuously evolves, guaranteeing top-notch automation and reliability."
+            description: "Transform your botting script with our adaptive AI that evolves to mimic human behavior. Our technology continuously learns and adjusts, making your bot’s actions indistinguishable from real player input, ensuring seamless and undetectable automation."
         },
         {
             icon: faFingerprint,
-            title: "Biometric Integration",
-            description: "Achieve the ultimate in bot security with our biometric integration. Each user's bot is uniquely tailored to their own human-to-machine inputs. Unlike competitors who deploy identical techniques across thousands of bots, BotSafe ensures you are literally replicating yourself, providing unmatched safety and undetectability."
+            title: "Exclusive Biometric Security",
+            description: "Secure your bot with state-of-the-art biometric integration. Unlike generic software, our technology customizes each bot to your unique biometric profile, offering unparalleled protection and privacy."
         },
         {
             icon: faPersonRunning,
             title: "Unmatched Efficiency",
-            description: "Designed with efficiency and reliability at its core, BotSafe stands out from the competition. Developed in C++ and leveraging advanced CV techniques, our bot delivers superior performance you can trust."
+            description: "Designed with efficiency and reliability at its core, BotSafe stands out from the competition. Developed in C++ and leveraging efficient CV techniques, our bot delivers superior performance."
         },
         {
             icon: faMicrochip,
             title: 'AI Chat Responses',
-            description: 'With the intelliChat Package, BotSafe responds back to players within the game using a customizable Large Language Model (LLM) tailored to your preferences. Customise your own personality traits, so no one suspects you are a bot.',
+            description: 'With the IntelliChat package, BotSafe engages with players using a customizable Large Language Model (LLM) tailored to your preferences. This high level of customization allows you to personalize your bot’s responses, making interactions more natural and helping you avoid detection.',
+        },
+        {
+            icon: faMobileAlt,
+            title: 'External Automation',
+            description: 'Our software utilises a mobile emulator, to conceal its behaviour more effectively. BotSafe does not interact directly with the memory of the video-game whatsoever — keeping you safer.',
         },
     ];
 

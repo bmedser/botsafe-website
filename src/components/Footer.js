@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTwitter, faFacebook, faLinkedin, faGithub, faDiscord} from '@fortawesome/free-brands-svg-icons';
+import {/*faTwitter, faFacebook, faLinkedin, faGithub, */faDiscord} from '@fortawesome/free-brands-svg-icons';
 import {Link} from 'react-router-dom'; // Import Link from react-router-dom
 
 const FooterContainer = styled.footer`
@@ -53,7 +53,7 @@ const FooterLink = styled.a`
     }
 `;
 
-const SocialIcons = styled.div`
+/*const SocialIcons = styled.div`
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
@@ -68,7 +68,7 @@ const SocialIcon = styled.a`
     &:hover {
         color: #3f51b5;
     }
-`;
+`;*/
 
 const Copyright = styled.div`
     margin-top: 2rem;
@@ -101,19 +101,17 @@ const Footer = () => {
                 <ContactSection>
                     <FooterTitle>Contact Us</FooterTitle>
                     <FooterList>
-                        <FooterListItem>Email: info@botsafe.com</FooterListItem>
+                        {/*<FooterListItem>Email: info@botsafe.com</FooterListItem>*/}
                         <FooterListItem>
                             <FooterLink href="https://discord.gg/XmhAZgmhJb" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faDiscord}/> Join our Discord for support
                             </FooterLink>
                         </FooterListItem>
                     </FooterList>
-                    <SocialIcons>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faTwitter}/></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faFacebook}/></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faLinkedin}/></SocialIcon>
-                        <SocialIcon href="#"><FontAwesomeIcon icon={faGithub}/></SocialIcon>
-                    </SocialIcons>
+                    {/*<SocialIcons>*/}
+                    {/*    <SocialIcon href="#"><FontAwesomeIcon icon={faTwitter}/></SocialIcon>*/}
+                    {/*    <SocialIcon href="#"><FontAwesomeIcon icon={faFacebook}/></SocialIcon>*/}
+                    {/*</SocialIcons>*/}
                 </ContactSection>
             </FooterContent>
             <Copyright>

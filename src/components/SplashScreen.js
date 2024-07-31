@@ -86,39 +86,18 @@ const Title = styled.p`
 const Subtitle = styled.h3`
     font-size: 1.5rem;    
     
-    margin-top: 6rem;
+    margin-top: 2rem;
     color: #eee;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 `;
 
-// const FeaturesContainer = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     gap: 2rem;
-//     margin-top: 2rem;
-// `;
-//
-// const Feature = styled.div`
-//     text-align: center;
-//     flex: 1 1 250px;
-//     min-width: 250px;
-//     max-width: 300px;
-// `;
-//
-// const FeatureIcon = styled(FontAwesomeIcon)`
-//     font-size: 2.5rem;
-//     margin-bottom: 1rem;
-// `;
-//
-// const FeatureTitle = styled.h3`
-//     font-size: 1.5rem;
-//     margin-bottom: 0.5rem;
-// `;
-//
-// const FeatureDescription = styled.p`
-//     font-size: 1rem;
-// `;
+const Header = styled.h1`
+    font-size: 2.5rem;    
+    
+    margin-top: 4rem;
+    color: #eee;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+`;
 
 const SplashScreen = () => {
     return (
@@ -132,8 +111,8 @@ const SplashScreen = () => {
                 </LogoContainer>
                 <TextContent>
                     <Title>The Safe OSRS Bot</Title>
-                    <Subtitle>Forget the Worry of Being Banned: Experience Safe and Intelligent OSRS Botting with
-                        Advanced AI</Subtitle>
+                    <Header>Say Goodbye to Bans</Header>
+                    <Subtitle>Embrace the Future of Smart and Safe OSRS Botting with Advanced AI</Subtitle>
                 </TextContent>
                 {/*<FeaturesContainer>*/}
                 {/*    <Feature>*/}
